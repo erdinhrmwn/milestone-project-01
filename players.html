@@ -99,22 +99,22 @@
             let inputVal = searchInput.value.toLowerCase();
 
             if (!inputVal) {
-                renderPlayers(availablePlayers);
+                renderPlayerGrid(availablePlayers);
                 return;
             }
 
             let filteredPlayers = availablePlayers.filter(player => player.name.toLowerCase().includes(inputVal));
-            renderPlayers(filteredPlayers);
+            renderPlayerGrid(filteredPlayers);
         }
 
         function handleFavorite(playerId) {
             toggleFavorite(playerId);
 
             availablePlayers = getAvailablePlayers();
-            renderPlayers(availablePlayers);
+            renderPlayerGrid(availablePlayers);
         }
 
-        function renderPlayers(players) {
+        function renderPlayerGrid(players) {
             playerGrid.innerHTML = '';
 
             players.forEach(player => {
@@ -142,7 +142,7 @@
         }
 
         // Initial render
-        renderPlayers(availablePlayers);
+        renderPlayerGrid(availablePlayers);
     </script>
 </body>
 
