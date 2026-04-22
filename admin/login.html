@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Football Card Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-xl w-96">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Admin Login</h1>
+        <form id="loginForm">
+            <div id="errorMessage" class="hidden mb-4 p-2 bg-red-100 text-red-700 text-sm rounded border border-red-200 text-center"></div>
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                <input required class="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="username" placeholder="Enter username">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                <input required class="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" type="password" id="password" placeholder="Enter password">
+            </div>
+            <button class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition" type="submit">Login</button>
+        </form>
+        <div class="mt-4 text-center text-sm">
+            <a href="../index.html" class="text-blue-500 hover:underline">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        const usernameRef = document.getElementById('username');
+        const passwordRef = document.getElementById('password');
+        const errorDiv = document.getElementById('errorMessage');
+
+        usernameRef.addEventListener('keydown', function() {
+            if (errorDiv.classList.contains('hidden')) {
+                return;
+            }
+
+            if (usernameRef.value.length >= 3) {
+                errorDiv.classList.add('hidden');
+            }
+        });
+
+        passwordRef.addEventListener('keydown', function() {
+            if (errorDiv.classList.contains('hidden')) {
+                return;
+            }
+
+            if (passwordRef.value.length >= 6) {
+                errorDiv.classList.add('hidden');
+            }
+        });
+
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = usernameRef.value.trim();
+            const password = passwordRef.value.trim();
+
+            // Validate username
+            if (username.length < 3) {
+                errorDiv.textContent = 'Username must be at least 3 characters';
+                errorDiv.classList.remove('hidden');
+                return;
+            }
+
+            // Validate password
+            if (password.length < 6) {
+                errorDiv.textContent = 'Password must be at least 6 characters';
+                errorDiv.classList.remove('hidden');
+                return;
+            }
+
+            if (username === 'admin' && password === 'password123') {
+                alert('Login successful');
+                window.location.href = 'index.html';
+            } else {
+                errorDiv.textContent = 'Invalid username or password';
+                errorDiv.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

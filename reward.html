@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reward - Football Card Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.min.js"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-blue-600 p-4 text-white shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">Football Cards</a>
+            <div class="space-x-4">
+                <a href="index.html" class="hover:underline">Home</a>
+                <a href="players.html" class="hover:underline">Players</a>
+                <a href="reward.html" class="hover:underline">Reward</a>
+                <a href="tutorial.html" class="hover:underline">Tutorial</a>
+                <a href="about.html" class="hover:underline">About</a>
+                <a href="admin/login.html" class="bg-blue-800 px-3 py-1 rounded hover:bg-blue-900">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto mt-10 p-6 text-center">
+        <h1 class="text-3xl font-bold mb-6">Shuffle & Win!</h1>
+        <div class="bg-white p-10 rounded-xl shadow-lg max-w-md mx-auto">
+            <!-- Reward Notification -->
+            <p id="rewardNotification" class="text-lg font-medium text-green-600 mb-4"></p>
+
+            <div id="rewardCard"
+                class="w-32 h-48 bg-blue-500 rounded-lg mx-auto mb-6 flex items-center justify-center text-white text-4xl shadow-inner border border-blue-500">
+                ?
+            </div>
+            <button id="shuffleBtn"
+                class="bg-yellow-500 text-white px-8 py-3 rounded-full font-bold hover:bg-yellow-600 transition shadow-md disabled:opacity-50 disabled:cursor-not-allowed">SHUFFLE
+                CARDS</button>
+        </div>
+
+
+        <!-- Reward Histories -->
+        <div class="container mx-auto mt-10 p-6 text-center">
+            <h1 class="text-3xl font-bold mb-6">Reward Histories</h1>
+            <div class="w-full bg-white p-10 rounded-xl shadow-lg">
+                <table class="table-fixed w-full text-left border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="bg-gray-200">
+                            <th class="p-3 border border-gray-300 w-1/12">ID</th>
+                            <th class="p-3 border border-gray-300 w-4/12">Name</th>
+                            <th class="p-3 border border-gray-300 w-1/12">Position</th>
+                            <th class="p-3 border border-gray-300 w-2/12">Nationality</th>
+                            <th class="p-3 border border-gray-300 w-3/12 text-center">Image</th>
+                            <th class="p-3 border border-gray-300 w-2/12 text-center">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rewardHistories"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="players.js"></script>
+    <script src="favorites.js"></script>
+    <script>
+        const availablePlayers = getAvailablePlayers();
+        const rewardHistories = [];
+
+        const shuffleBtn = document.getElementById('shuffleBtn');
+        const rewardCard = document.getElementById('rewardCard');
+        const historiesTable = document.getElementById('rewardHistories');
+        const rewardNotification = document.getElementById('rewardNotification');
+
+        function renderTable() {
+            if (rewardHistories.length === 0) {
+                historiesTable.innerHTML = `
+                <tr>
+                    <td colspan="5" class="text-center p-8">No reward histories yet.</td>
+                </tr>`;
+            } else {
+                historiesTable.innerHTML = '';
+                rewardHistories.forEach((player) => {
+                    historiesTable.innerHTML += `
+                    <tr>
+                        <td class="p-3 border border-gray-300">${player.id}</td>
+                        <td class="p-3 border border-gray-300">${player.name}</td>
+                        <td class="p-3 border border-gray-300">${player.position}</td>
+                        <td class="p-3 border border-gray-300">${player.nationality}</td>
+                        <td class="p-3 border border-gray-300 text-center flex items-center justify-center"><img src="${player.image}" alt="${player.name}" class="object-cover w-20 h-28 rounded-lg"></td>
+                        <td class="p-3 border border-gray-300">${player.date}</td>
+                    </tr>`;
+                });
+            }
+
+        }
+
+        shuffleBtn.addEventListener('click', () => {
+            let selectedPlayer = null;
+
+            // Disable Button
+            shuffleBtn.disabled = true;
+
+            // Random Animation for 5s
+            let animate = setInterval(() => {
+                selectedPlayer = availablePlayers[Math.floor(Math.random() * availablePlayers.length)];
+                rewardCard.innerHTML = `<img src="${selectedPlayer.image}" alt="${selectedPlayer.name}" class="object-cover w-full h-full rounded-lg">`;
+            }, 100);
+
+            // Stop Animation after 5s
+            setTimeout(() => {
+                clearInterval(animate);
+
+                rewardNotification.innerHTML = `Congratulations!<br />You got ${selectedPlayer.name} from ${selectedPlayer.nationality}!`;
+
+                rewardHistories.push({
+                    id: rewardHistories.length + 1,
+                    name: selectedPlayer.name,
+                    position: selectedPlayer.position,
+                    nationality: selectedPlayer.nationality,
+                    image: selectedPlayer.image,
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                });
+                renderTable();
+
+                // Enable Button
+                shuffleBtn.disabled = false;
+            }, 5000);
+        });
+
+        renderTable();
+    </script>
+</body>
+
+</html>
