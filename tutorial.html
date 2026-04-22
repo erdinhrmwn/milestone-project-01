@@ -63,56 +63,34 @@
         </a>
     </nav>
 
-    <main class="container mx-auto mt-10 p-10 bg-white rounded-lg shadow-md max-w-3xl">
-        <h1 class="text-4xl font-bold mb-8 text-center text-[#e50027]">Master the Game</h1>
-        
-        <div class="space-y-12">
-            <!-- Step 1 -->
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="bg-[#fde8e8] text-[#e50027] w-16 h-16 rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0">
-                    1
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Claim Your Rewards</h3>
-                    <p class="text-gray-600">
-                        Head over to the <a href="reward.html" class="text-[#e50027] hover:underline">Reward</a> page. Click the "Shuffle" button to start the animation. After 5 seconds of suspense, a random player card will be drawn from our extensive database. All your rewards are tracked in your personal history!
-                    </p>
-                </div>
+    <main class="container mx-auto mt-10 p-10 bg-white border border-gray-300 rounded max-w-3xl shadow-sm">
+        <h1 class="text-3xl font-bold mb-4">Tutorial: How to Play</h1>
+        <p class="mb-8">This is a simple guide to help you use the football card app. It is very easy!</p>
+
+        <div class="space-y-10">
+            <div>
+                <h2 class="text-xl font-bold border-b border-gray-200 pb-2 mb-4">Step 1: Get New Cards</h2>
+                <p>Go to the <b>Reward</b> page. There is a button called "Shuffle". Click it and wait for 5 seconds. You will see a random player card. Every card you get is saved in the list below the button.</p>
             </div>
 
-            <!-- Step 2 -->
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0">
-                    2
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Manage Your Favorites</h3>
-                    <p class="text-gray-600">
-                        Found a player you love? Go to the <a href="players.html" class="text-[#e50027] hover:underline">Players</a> section. You'll see a heart icon (🤍) on each card. Click it to turn it red (❤️) and add the player to your favorites. This is saved to your browser, so they'll be there next time you visit!
-                    </p>
-                </div>
+            <div>
+                <h2 class="text-xl font-bold border-b border-gray-200 pb-2 mb-4">Step 2: See Your Collection</h2>
+                <p>Go to the <b>Players</b> page. You can see all available players there. If you like a player, click the heart icon. This will save them as your favorite. The favorite players will have a red heart.</p>
             </div>
 
-            <!-- Step 3 -->
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0">
-                    3
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-2">Understand the Stats</h3>
-                    <p class="text-gray-600">
-                        Every card displays the player's primary position (e.g., FW for Forward, MF for Midfielder) and their nationality. Use this information to learn about the diversity of talent in the football world.
-                    </p>
-                </div>
+            <div>
+                <h2 class="text-xl font-bold border-b border-gray-200 pb-2 mb-4">Step 3: Admin Stuff</h2>
+                <p>If you are an admin, you can login to add or delete players. New players will appear in the shuffle reward immediately.</p>
             </div>
+        </div>
 
-            <!-- Pro Tip -->
-            <div class="mt-12 bg-gray-50 p-6 rounded-xl border border-gray-200">
-                <h4 class="font-bold text-gray-800 mb-2">💡 Pro Tip</h4>
-                <p class="text-gray-600 text-sm italic">
-                    If you're an administrator, you can add new players to the database via the Admin Panel. These new players will immediately become available in the Reward shuffle!
-                </p>
-            </div>
+        <div class="mt-12 p-6 bg-gray-50 border-t-4 border-[#e50027]">
+            <h3 class="font-bold mb-2 underline">Simple Tips:</h3>
+            <ul class="list-disc list-inside">
+                <li>Search for players by typing their name in the search box.</li>
+                <li>Favorites are saved in your browser (local storage).</li>
+                <li>Refresh the page if you want to start over.</li>
+            </ul>
         </div>
     </main>
 </body>
