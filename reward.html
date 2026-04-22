@@ -5,34 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reward - Football Card Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.min.js"></script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+    </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
-    <nav class="bg-blue-600 p-4 text-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold">Football Cards</a>
-            <div class="space-x-4">
+<body class="bg-gray-100 text-gray-900 pb-20">
+    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 shadow-md z-50">
+        <div class="container mx-auto grid grid-cols-[1fr_auto_1fr] items-center">
+            <div class="justify-self-start">
+                <a href="index.html" class="text-xl font-bold">Football Cards</a>
+            </div>
+            <div class="justify-self-center flex justify-between items-center space-x-5 lg:block hidden">
                 <a href="index.html" class="hover:underline">Home</a>
                 <a href="players.html" class="hover:underline">Players</a>
-                <a href="reward.html" class="hover:underline">Reward</a>
+                <a href="reward.html" class="font-semibold hover:underline">Reward</a>
                 <a href="tutorial.html" class="hover:underline">Tutorial</a>
                 <a href="about.html" class="hover:underline">About</a>
-                <a href="admin/login.html" class="bg-blue-800 px-3 py-1 rounded hover:bg-blue-900">Admin</a>
+            </div>
+            <div class="justify-self-end lg:block hidden">
+                <a href="admin/login.html"
+                    class="bg-white text-black border border-[#e50027] px-4 py-2 rounded hover:bg-white hover:underline">Admin
+                    Login</a>
             </div>
         </div>
     </nav>
 
+    <!-- Mobile Navbar -->
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
+        <a href="index.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+            <span class="text-2xl">🏠</span>
+            <span class="text-xs">Home</span>
+        </a>
+        <a href="players.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+            <span class="text-2xl">👥</span>
+            <span class="text-xs">Players</span>
+        </a>
+        <a href="reward.html" class="flex flex-col items-center text-[#e50027]">
+            <span class="text-2xl">🎁</span>
+            <span class="text-xs">Reward</span>
+        </a>
+        <a href="tutorial.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+            <span class="text-2xl">📖</span>
+            <span class="text-xs">Tutorial</span>
+        </a>
+        <a href="about.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+            <span class="text-2xl">ℹ️</span>
+            <span class="text-xs">About</span>
+        </a>
+        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+            <span class="text-2xl">🔐</span>
+            <span class="text-xs">Admin</span>
+        </a>
+    </nav>
+
     <main class="container mx-auto mt-10 p-6 text-center">
-        <h1 class="text-3xl font-bold mb-6">Shuffle & Win!</h1>
+        <h1 class="text-3xl font-bold mb-6 text-[#e50027]">Shuffle & Win!</h1>
         <div class="bg-white p-10 rounded-xl shadow-lg max-w-md mx-auto">
             <!-- Reward Notification -->
             <p id="rewardNotification" class="text-lg font-medium text-green-600 mb-4"></p>
 
             <div id="rewardCard"
-                class="w-32 h-48 bg-blue-500 rounded-lg mx-auto mb-6 flex items-center justify-center text-white text-4xl shadow-inner border border-blue-500">
+                class="w-32 h-48 bg-[#e50027] rounded-lg mx-auto mb-6 flex items-center justify-center text-white text-4xl shadow-inner border border-[#e50027]">
                 ?
             </div>
             <button id="shuffleBtn"

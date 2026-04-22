@@ -5,14 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Football Card Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+    </style>
 </head>
 
 <body class="bg-gray-100 min-h-screen">
-    <nav class="bg-gray-800 p-4 text-white">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold">Admin Panel</h1>
-            <a href="../index.html" class="text-sm bg-red-600 px-3 py-1 rounded-sm hover:bg-red-700">Logout</a>
+    <nav class="bg-gray-800 p-4 text-white shadow-md">
+        <div class="container mx-auto grid grid-cols-[1fr_auto] items-center">
+            <div class="justify-self-start">
+                <h1 class="text-xl font-bold">Admin Panel</h1>
+                <span class="text-gray-400 text-sm font-medium uppercase tracking-wider">Dashboard</span>
+            </div>
+            <div class="justify-self-end">
+                <a href="../index.html" class="text-sm bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition">Logout</a>
+            </div>
         </div>
     </nav>
 

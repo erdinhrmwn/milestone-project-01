@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - Football Card Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+    </style>
 </head>
 
 <body class="bg-gray-200 flex items-center justify-center h-screen">
@@ -15,16 +21,16 @@
             <div id="errorMessage" class="hidden mb-4 p-2 bg-red-100 text-red-700 text-sm rounded border border-red-200 text-center"></div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
-                <input required class="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" id="username" placeholder="Enter username">
+                <input required class="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e50027]" type="text" id="username" placeholder="Enter username">
             </div>
             <div class="mb-6">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
-                <input required class="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" type="password" id="password" placeholder="Enter password">
+                <input required class="w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-[#e50027]" type="password" id="password" placeholder="Enter password">
             </div>
-            <button class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition" type="submit">Login</button>
+            <button class="w-full bg-[#e50027] text-white font-bold py-2 rounded hover:bg-[#c30124] transition" type="submit">Login</button>
         </form>
         <div class="mt-4 text-center text-sm">
-            <a href="../index.html" class="text-blue-500 hover:underline">Back to Home</a>
+            <a href="../index.html" class="text-[#e50027] hover:underline">Back to Home</a>
         </div>
     </div>
 
