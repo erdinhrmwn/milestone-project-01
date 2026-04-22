@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Outfit', sans-serif; }
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
     </style>
 </head>
 
@@ -22,7 +24,8 @@
                 <span class="text-gray-400 text-sm font-medium uppercase tracking-wider">Dashboard</span>
             </div>
             <div class="justify-self-end">
-                <a href="../index.html" class="text-sm bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition">Logout</a>
+                <button onclick="handleLogout()"
+                    class="text-sm bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition">Logout</button>
             </div>
         </div>
     </nav>
@@ -91,16 +94,20 @@
 
     <script src="../players.js"></script>
     <script>
-        const tableBody = document.getElementById('playerTableBody');
-        const addForm = document.getElementById('addPlayerForm');
+        // Validate authentication
+        const authState = localStorage.getItem("authenticated");
 
-        function renderTable() {
-            const currentPlayers = getAvailablePlayers();
-            tableBody.innerHTML = '';
+        if (authState === "true") {
+            const tableBody = document.getElementById('playerTableBody');
+            const addForm = document.getElementById('addPlayerForm');
 
-            currentPlayers.forEach(player => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
+            function renderTable() {
+                const currentPlayers = getAvailablePlayers();
+                tableBody.innerHTML = '';
+
+                currentPlayers.forEach(player => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
                     <td class="p-3 border border-gray-300 text-center font-mono text-sm">${player.id}</td>
                     <td class="p-3 border border-gray-300 font-medium">${player.name}</td>
                     <td class="p-3 border border-gray-300">${player.position}</td>
@@ -109,46 +116,54 @@
                         <button onclick="handleDelete(${player.id})" class="text-red-600 hover:underline font-medium">Delete</button>
                     </td>
                 `;
-                tableBody.appendChild(row);
-            });
-        }
+                    tableBody.appendChild(row);
+                });
+            }
 
-        function toggleAddForm() {
-            addForm.classList.toggle('hidden');
-        }
+            function toggleAddForm() {
+                addForm.classList.toggle('hidden');
+            }
 
-        function submitNewPlayer() {
-            // Get input data
-            const name = document.getElementById('newPlayerName').value;
-            const position = document.getElementById('newPlayerPosition').value;
-            const nationality = document.getElementById('newPlayerNationality').value;
-            const image = document.getElementById('newPlayerImage').value;
+            function submitNewPlayer() {
+                // Get input data
+                const name = document.getElementById('newPlayerName').value;
+                const position = document.getElementById('newPlayerPosition').value;
+                const nationality = document.getElementById('newPlayerNationality').value;
+                const image = document.getElementById('newPlayerImage').value;
 
-            // Add new player
-            addPlayer(name, position, nationality, image);
+                // Add new player
+                addPlayer(name, position, nationality, image);
 
-            // Re-render the table
+                // Re-render the table
+                renderTable();
+
+                // Clear inputs
+                document.getElementById('newPlayerName').value = '';
+                document.getElementById('newPlayerPosition').value = '';
+                document.getElementById('newPlayerNationality').value = '';
+                document.getElementById('newPlayerImage').value = '';
+
+                // Hide form
+                toggleAddForm();
+            }
+
+            function handleDelete(id) {
+                if (confirm('Are you sure you want to delete this player?')) {
+                    deletePlayer(id);
+                    renderTable();
+                }
+            }
+
+            // Initial render
             renderTable();
 
-            // Clear inputs
-            document.getElementById('newPlayerName').value = '';
-            document.getElementById('newPlayerPosition').value = '';
-            document.getElementById('newPlayerNationality').value = '';
-            document.getElementById('newPlayerImage').value = '';
-
-            // Hide form
-            toggleAddForm();
-        }
-
-        function handleDelete(id) {
-            if (confirm('Are you sure you want to delete this player?')) {
-                deletePlayer(id);
-                renderTable();
+            function handleLogout() {
+                localStorage.removeItem('authenticated');
+                window.location.href = 'login.html';
             }
+        } else {
+            window.location.href = "login.html";
         }
-
-        // Initial render
-        renderTable();
     </script>
 </body>
 
