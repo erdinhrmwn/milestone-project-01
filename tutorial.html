@@ -10,15 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Outfit', sans-serif; }
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
     </style>
 </head>
 
 <body class="bg-gray-100 text-gray-900 pb-8">
-    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 border-b-[3px] border-black z-50">
+    <!-- Desktop Navbar -->
+    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 border-b-2 border-black z-50">
         <div class="container mx-auto grid grid-cols-[1fr_auto_1fr] items-center">
             <div class="justify-self-start">
-                <a href="index.html" class="text-2xl font-black uppercase tracking-tighter italic">Football Cards</a>
+                <a href="index.html" class="text-xl font-black uppercase tracking-tighter italic">Football Cards</a>
             </div>
             <div class="justify-self-center flex justify-between items-center space-x-8 lg:block hidden">
                 <a href="index.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Home</a>
@@ -29,23 +32,24 @@
             </div>
             <div class="justify-self-end lg:block hidden">
                 <a href="admin/login.html"
-                    class="bg-white text-black border-[3px] border-black px-6 py-2 rounded-lg font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">Admin
+                    class="bg-white text-black border-2 border-black px-4 py-1.5 rounded-lg font-bold text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">Admin
                     Login</a>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Navbar -->
-    <nav class="fixed bottom-0 left-0 w-full bg-white border-t-[3px] border-black flex justify-around items-center p-4 z-50 lg:hidden">
-        <a href="index.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
+    <nav
+        class="fixed bottom-0 left-0 w-full bg-white border-t-2 border-black flex justify-around items-center p-4 z-50 lg:hidden">
+        <a href="index.html" class="flex flex-col items-center text-gray-600 font-bold">
             <span class="text-2xl">🏠</span>
             <span class="text-xs uppercase tracking-widest">Home</span>
         </a>
-        <a href="players.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
+        <a href="players.html" class="flex flex-col items-center text-gray-600 font-bold">
             <span class="text-2xl">👥</span>
             <span class="text-xs uppercase tracking-widest">Players</span>
         </a>
-        <a href="reward.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
+        <a href="reward.html" class="flex flex-col items-center text-gray-600 font-bold">
             <span class="text-2xl">🎁</span>
             <span class="text-xs uppercase tracking-widest">Reward</span>
         </a>
@@ -53,11 +57,11 @@
             <span class="text-2xl">📖</span>
             <span class="text-xs uppercase tracking-widest">Tutorial</span>
         </a>
-        <a href="about.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
+        <a href="about.html" class="flex flex-col items-center text-gray-600 font-bold">
             <span class="text-2xl">ℹ️</span>
             <span class="text-xs uppercase tracking-widest">About</span>
         </a>
-        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
+        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 font-bold">
             <span class="text-2xl">🔐</span>
             <span class="text-xs uppercase tracking-widest">Admin</span>
         </a>
@@ -65,54 +69,55 @@
 
     <main class="container mx-auto mt-10 pb-20">
         <!-- Tutorial Hero Section -->
-        <section class="md:p-12 p-8 mx-6 md:mx-0 bg-[#e50027] border-[3px] border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center mb-10 text-white">
-            <h1 class="text-6xl font-black mb-4 uppercase tracking-tighter italic">How to Play</h1>
-            <p class="text-xl max-w-2xl mx-auto font-medium">
-                Master the game in three simple steps. Start collecting your favorite football stars today!
+        <section
+            class="md:p-10 p-6 mx-6 md:mx-0 bg-[#e50027] border-2 border-black rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-center mb-10 text-white">
+            <h1 class="text-4xl font-black mb-3 uppercase tracking-tighter italic">How to Play</h1>
+            <p class="text-lg max-w-2xl mx-auto font-medium text-red-50">
+                Master the game in three simple steps.<br />Start collecting your favorite football stars today!
             </p>
         </section>
 
-        <div class="max-w-4xl mx-auto px-6 md:px-0">
-            <div class="space-y-12">
-                <div class="bg-white p-10 rounded-2xl border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all">
-                    <h2 class="text-3xl font-black border-b-[3px] border-black pb-4 mb-6 uppercase tracking-tighter italic">Step 1: Get New Cards</h2>
-                    <p class="text-lg font-medium text-gray-600 leading-relaxed">Go to the <a href="reward.html" class="text-[#e50027] underline font-bold">Reward</a> page. Click "Shuffle" and wait for the magic to happen! Every card you pull is saved in your history.</p>
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="space-y-10">
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                    <h2 class="text-2xl font-black border-b-2 border-black pb-3 mb-5 uppercase tracking-tighter italic">
+                        Step 1: Get New Cards
+                    </h2>
+                    <p class="text-base font-medium text-gray-600 leading-relaxed">
+                        Go to the
+                        <a href="reward.html" class="text-[#e50027] underline font-bold">Reward</a> page. Click
+                        "Shuffle" and wait for the
+                        magic to happen! Every card you pull is saved in your history.
+                    </p>
                 </div>
 
-                <div class="bg-white p-10 rounded-2xl border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all">
-                    <h2 class="text-3xl font-black border-b-[3px] border-black pb-4 mb-6 uppercase tracking-tighter italic">Step 2: See Your Collection</h2>
-                    <p class="text-lg font-medium text-gray-600 leading-relaxed">Visit the <a href="players.html" class="text-[#e50027] underline font-bold">Players</a> page to see all stars. Click the heart icon to save your favorites!</p>
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                    <h2 class="text-2xl font-black border-b-2 border-black pb-3 mb-5 uppercase tracking-tighter italic">
+                        Step 2: See Your Collection
+                    </h2>
+                    <p class="text-base font-medium text-gray-600 leading-relaxed">
+                        Visit the
+                        <a href="players.html" class="text-[#e50027] underline font-bold">Players</a> page to see all
+                        stars.
+                        Click the heart icon to save your favorites!
+                    </p>
                 </div>
 
-                <div class="bg-white p-10 rounded-2xl border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all">
-                    <h2 class="text-3xl font-black border-b-[3px] border-black pb-4 mb-6 uppercase tracking-tighter italic">Step 3: Admin Management</h2>
-                    <p class="text-lg font-medium text-gray-600 leading-relaxed">Admins can log in to manage the player roster. New additions are instantly available for everyone to discover!</p>
+                <div
+                    class="bg-white p-8 rounded-2xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                    <h2 class="text-2xl font-black border-b-2 border-black pb-3 mb-5 uppercase tracking-tighter italic">
+                        Step 3: Admin Management
+                    </h2>
+                    <p class="text-base font-medium text-gray-600 leading-relaxed">
+                        Admins can log in to manage the player roster.
+                        New additions are instantly available for everyone to discover!
+                    </p>
                 </div>
-            </div>
-
-            <div class="mt-16 p-10 bg-yellow-50 border-[3px] border-black rounded-2xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                <h3 class="text-2xl font-black mb-4 uppercase italic">Pro Tips:</h3>
-                <ul class="space-y-4">
-                    <li class="flex items-center gap-3 font-bold text-gray-700">
-                        <span class="w-8 h-8 flex items-center justify-center bg-white border-2 border-black rounded shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm">01</span>
-                        Search for players by typing their name in the search box.
-                    </li>
-                    <li class="flex items-center gap-3 font-bold text-gray-700">
-                        <span class="w-8 h-8 flex items-center justify-center bg-white border-2 border-black rounded shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm">02</span>
-                        Favorites are saved in your browser (local storage).
-                    </li>
-                    <li class="flex items-center gap-3 font-bold text-gray-700">
-                        <span class="w-8 h-8 flex items-center justify-center bg-white border-2 border-black rounded shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-sm">03</span>
-                        Refresh the page if you want to start over.
-                    </li>
-                </ul>
             </div>
         </div>
     </main>
-
-    <footer class="text-center mt-10 mb-20 text-gray-500 text-sm">
-        &copy; 2026 Football Card Game. All rights reserved.
-    </footer>
 </body>
 
 </html>
