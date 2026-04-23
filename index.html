@@ -17,143 +17,137 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900 pb-8">
-    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 shadow-md z-50">
+    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 border-b-[3px] border-black z-50">
         <div class="container mx-auto grid grid-cols-[1fr_auto_1fr] items-center">
             <div class="justify-self-start">
-                <a href="index.html" class="text-xl font-bold">Football Cards</a>
+                <a href="index.html" class="text-2xl font-black uppercase tracking-tighter italic">Football Cards</a>
             </div>
-            <div class="justify-self-center flex justify-between items-center space-x-5 lg:block hidden">
-                <a href="index.html" class="font-semibold hover:underline">Home</a>
-                <a href="players.html" class="hover:underline">Players</a>
-                <a href="reward.html" class="hover:underline">Reward</a>
-                <a href="tutorial.html" class="hover:underline">Tutorial</a>
-                <a href="about.html" class="hover:underline">About</a>
+            <div class="justify-self-center flex justify-between items-center space-x-8 lg:block hidden">
+                <a href="index.html" class="font-bold border-b-4 border-white pb-1">Home</a>
+                <a href="players.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Players</a>
+                <a href="reward.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Reward</a>
+                <a href="tutorial.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Tutorial</a>
+                <a href="about.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">About</a>
             </div>
             <div class="justify-self-end lg:block hidden">
                 <a href="admin/login.html"
-                    class="bg-white text-black border border-[#e50027] px-4 py-2 rounded hover:bg-white hover:underline">Admin
+                    class="bg-white text-black border-[3px] border-black px-6 py-2 rounded-lg font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">Admin
                     Login</a>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Navbar -->
-    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
-        <a href="index.html" class="flex flex-col items-center text-[#e50027]">
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t-[3px] border-black flex justify-around items-center p-4 z-50 lg:hidden">
+        <a href="index.html" class="flex flex-col items-center text-[#e50027] font-bold">
             <span class="text-2xl">🏠</span>
-            <span class="text-xs">Home</span>
+            <span class="text-xs uppercase tracking-widest">Home</span>
         </a>
-        <a href="players.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="players.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">👥</span>
-            <span class="text-xs">Players</span>
+            <span class="text-xs uppercase tracking-widest">Players</span>
         </a>
-        <a href="reward.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="reward.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">🎁</span>
-            <span class="text-xs">Reward</span>
+            <span class="text-xs uppercase tracking-widest">Reward</span>
         </a>
-        <a href="tutorial.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="tutorial.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">📖</span>
-            <span class="text-xs">Tutorial</span>
+            <span class="text-xs uppercase tracking-widest">Tutorial</span>
         </a>
-        <a href="about.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="about.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">ℹ️</span>
-            <span class="text-xs">About</span>
+            <span class="text-xs uppercase tracking-widest">About</span>
         </a>
-        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">🔐</span>
-            <span class="text-xs">Admin</span>
+            <span class="text-xs uppercase tracking-widest">Admin</span>
         </a>
     </nav>
 
     <main class="container mx-auto mt-10 pb-20">
         <!-- Hero Section -->
-        <section class="md:p-12 p-6 mx-6 md:mx-0 bg-[#e50027] rounded-lg shadow-md text-center mb-10 text-white">
-            <h1 class="text-5xl font-extrabold mb-6">Your Ultimate Football Card Collection</h1>
-            <p class="text-xl mb-10 max-w-2xl mx-auto">
+        <section class="md:p-16 p-8 mx-6 md:mx-0 bg-[#e50027] border-[3px] border-black rounded-2xl shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] text-center mb-20 text-white relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase tracking-tighter italic">Your Ultimate<br>Football Card Collection</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-medium text-red-50">
                 Step into the world of professional football! Collect legendary players, discover rising stars, and
-                build your dream team with our interactive card system.
+                build your dream team.
             </p>
             <div class="flex justify-center space-x-4">
                 <a href="players.html"
-                    class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">Browse
+                    class="bg-white text-black px-10 py-4 rounded-xl font-black text-xl uppercase border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">Browse
                     Gallery</a>
             </div>
         </section>
 
         <!-- Feature Section 1: Instant Rewards -->
-        <section class="flex flex-col md:flex-row items-stretch gap-12 py-6 md:px-0 px-6 rounded-lg mb-10">
+        <section class="flex flex-col md:flex-row items-stretch gap-12 py-10 md:px-0 px-6 mb-20">
             <div class="md:w-1/2 flex flex-col justify-center">
-                <div class="text-[#e50027] text-6xl mb-6">🔀</div>
-                <h2 class="text-4xl font-bold mb-4 text-gray-900">Instant Rewards at Your Fingertips</h2>
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                <div class="inline-block bg-yellow-400 border-[3px] border-black p-4 w-fit mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl text-4xl">🔀</div>
+                <h2 class="text-5xl font-black mb-6 text-gray-900 uppercase tracking-tighter">Instant Rewards</h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed font-medium">
                     Experience the excitement of the draw! Our unique shuffle system lets you pull high-value football
-                    cards instantly. Whether you're looking for a legendary striker or a rock-solid defender, every
-                    shuffle is a new chance to win.
+                    cards instantly. Every shuffle is a new chance to win.
                 </p>
                 <div>
                     <a href="reward.html"
-                        class="inline-block bg-[#e50027] text-white px-8 py-3 rounded-full font-bold hover:bg-[#c30124] transition shadow-lg">Try
+                        class="inline-block bg-[#e50027] text-white px-8 py-4 rounded-xl font-black uppercase border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">Try
                         Your Luck</a>
                 </div>
             </div>
             <div
-                class="md:w-1/2 bg-gray-50 p-12 rounded-2xl border border-gray-100 shadow-inner flex items-center justify-center">
-                <div class="text-9xl">🎁</div>
+                class="md:w-1/2 bg-white p-12 rounded-2xl border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center relative overflow-hidden group">
+                <div class="text-9xl group-hover:scale-110 transition-transform duration-500">🎁</div>
+                <div class="absolute bottom-4 right-4 text-xs font-bold uppercase text-gray-400">Card Pack #001</div>
             </div>
         </section>
 
         <!-- Feature Section 2: Favorite Players -->
-        <section class="flex flex-col md:flex-row-reverse items-stretch gap-12 py-6 px-6 bg-white rounded-lg mb-10 border border-gray-100">
+        <section class="flex flex-col md:flex-row-reverse items-stretch gap-12 py-10 px-6 bg-green-50 rounded-2xl mb-20 border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
             <div class="md:w-1/2 flex flex-col justify-center">
-                <div class="text-green-500 text-6xl mb-6">❤️</div>
-                <h2 class="text-4xl font-bold mb-4 text-gray-900">Keep Your Idols Close</h2>
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                    Build your personal collection of favorites. With a simple tap, you can mark the players who inspire
-                    you most. Your favorite list is saved locally, ensuring your dream team is always just a click away.
+                <div class="inline-block bg-white border-[3px] border-black p-4 w-fit mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl text-4xl">❤️</div>
+                <h2 class="text-5xl font-black mb-6 text-gray-900 uppercase tracking-tighter">Keep Your Idols</h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed font-medium">
+                    Build your personal collection. Mark the players who inspire you most. Your favorite list is saved locally, ensuring your dream team is always just a click away.
                 </p>
                 <div>
                     <a href="players.html"
-                        class="inline-block border-2 border-[#e50027] text-[#e50027] px-8 py-3 rounded-full font-bold hover:bg-[#e50027] hover:text-white transition shadow-md">Browse
+                        class="inline-block bg-white text-black px-8 py-4 rounded-xl font-black uppercase border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">Browse
                         Players</a>
                 </div>
             </div>
-            <div class="md:w-1/2 bg-[#fdf2f2] p-12 rounded-2xl border border-red-50 flex items-center justify-center">
+            <div class="md:w-1/2 bg-white p-12 rounded-2xl border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
                 <div class="text-9xl">⭐</div>
             </div>
         </section>
 
         <!-- Feature Section 3: Player Stats -->
-        <section class="flex flex-col md:flex-row items-stretch gap-12 py-6 md:px-0 px-6 rounded-lg mb-10">
+        <section class="flex flex-col md:flex-row items-stretch gap-12 py-10 md:px-0 px-6 mb-20">
             <div class="md:w-1/2 flex flex-col justify-center">
-                <div class="text-yellow-500 text-6xl mb-6">📊</div>
-                <h2 class="text-4xl font-bold mb-4 text-gray-900">Deep-Dive Into Stats</h2>
-                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                    Knowledge is power. Analyze detailed positions, nationalities, and performance metrics for every
-                    card in your deck. From world-class forwards to tactical midfielders, understand the strengths of
-                    every player.
+                <div class="inline-block bg-blue-400 border-[3px] border-black p-4 w-fit mb-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rounded-xl text-4xl">📊</div>
+                <h2 class="text-5xl font-black mb-6 text-gray-900 uppercase tracking-tighter">Deep-Dive Stats</h2>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed font-medium">
+                    Analyze detailed positions and performance metrics. From world-class forwards to tactical midfielders, understand the strengths of every player.
                 </p>
-                <div class="flex gap-4">
-                    <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-semibold text-gray-600">FW -
-                        Forward</span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-semibold text-gray-600">MF -
-                        Midfield</span>
-                    <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-semibold text-gray-600">DF -
-                        Defense</span>
+                <div class="flex flex-wrap gap-4">
+                    <span class="bg-white border-[3px] border-black px-4 py-2 rounded-lg text-sm font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">FW</span>
+                    <span class="bg-white border-[3px] border-black px-4 py-2 rounded-lg text-sm font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">MF</span>
+                    <span class="bg-white border-[3px] border-black px-4 py-2 rounded-lg text-sm font-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">DF</span>
                 </div>
             </div>
             <div
-                class="md:w-1/2 bg-gray-50 p-12 rounded-2xl border border-gray-100 shadow-inner flex items-center justify-center">
+                class="md:w-1/2 bg-white p-12 rounded-2xl border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
                 <div class="text-9xl">🏆</div>
             </div>
         </section>
 
         <!-- About Brief -->
-        <section class="bg-gray-900 text-white p-6 md:p-12 mx-6 md:mx-0 rounded-lg shadow-xl text-center">
-            <h2 class="text-3xl font-bold mb-4 text-[#e50027]">Ready to start your journey?</h2>
-            <p class="text-gray-300 mb-8 max-w-xl mx-auto">Join thousands of collectors worldwide. Our platform is the
-                simplest way to manage and discover football talent through a beautiful digital experience.</p>
+        <section class="bg-gray-900 text-white p-12 mx-6 md:mx-0 rounded-3xl border-[4px] border-white shadow-[12px_12px_0px_0px_rgba(229,0,39,1)] text-center">
+            <h2 class="text-4xl font-black mb-6 uppercase italic">Ready to start?</h2>
+            <p class="text-gray-300 mb-10 max-w-xl mx-auto font-medium text-xl">Join thousands of collectors worldwide. Start your journey through a beautiful digital experience today.</p>
             <a href="tutorial.html"
-                class="inline-block border-2 border-white text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition">Learn
+                class="inline-block bg-[#e50027] text-white px-10 py-4 rounded-xl font-black uppercase border-[3px] border-white shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,0.4)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all">Learn
                 How to Play</a>
         </section>
     </main>

@@ -15,79 +15,87 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900 pb-8">
-    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 shadow-md z-50">
+    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 border-b-[3px] border-black z-50">
         <div class="container mx-auto grid grid-cols-[1fr_auto_1fr] items-center">
             <div class="justify-self-start">
-                <a href="index.html" class="text-xl font-bold">Football Cards</a>
+                <a href="index.html" class="text-2xl font-black uppercase tracking-tighter italic">Football Cards</a>
             </div>
-            <div class="justify-self-center flex justify-between items-center space-x-5 lg:block hidden">
-                <a href="index.html" class="hover:underline">Home</a>
-                <a href="players.html" class="hover:underline">Players</a>
-                <a href="reward.html" class="hover:underline">Reward</a>
-                <a href="tutorial.html" class="hover:underline">Tutorial</a>
-                <a href="about.html" class="font-semibold hover:underline">About</a>
+            <div class="justify-self-center flex justify-between items-center space-x-8 lg:block hidden">
+                <a href="index.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Home</a>
+                <a href="players.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Players</a>
+                <a href="reward.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Reward</a>
+                <a href="tutorial.html" class="font-bold hover:border-b-4 border-white pb-1 transition-all">Tutorial</a>
+                <a href="about.html" class="font-bold border-b-4 border-white pb-1">About</a>
             </div>
             <div class="justify-self-end lg:block hidden">
                 <a href="admin/login.html"
-                    class="bg-white text-black border border-[#e50027] px-4 py-2 rounded hover:bg-white hover:underline">Admin
+                    class="bg-white text-black border-[3px] border-black px-6 py-2 rounded-lg font-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">Admin
                     Login</a>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Navbar -->
-    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
-        <a href="index.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t-[3px] border-black flex justify-around items-center p-4 z-50 lg:hidden">
+        <a href="index.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">🏠</span>
-            <span class="text-xs">Home</span>
+            <span class="text-xs uppercase tracking-widest">Home</span>
         </a>
-        <a href="players.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="players.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">👥</span>
-            <span class="text-xs">Players</span>
+            <span class="text-xs uppercase tracking-widest">Players</span>
         </a>
-        <a href="reward.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="reward.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">🎁</span>
-            <span class="text-xs">Reward</span>
+            <span class="text-xs uppercase tracking-widest">Reward</span>
         </a>
-        <a href="tutorial.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="tutorial.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">📖</span>
-            <span class="text-xs">Tutorial</span>
+            <span class="text-xs uppercase tracking-widest">Tutorial</span>
         </a>
-        <a href="about.html" class="flex flex-col items-center text-[#e50027]">
+        <a href="about.html" class="flex flex-col items-center text-[#e50027] font-bold">
             <span class="text-2xl">ℹ️</span>
-            <span class="text-xs">About</span>
+            <span class="text-xs uppercase tracking-widest">About</span>
         </a>
-        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+        <a href="admin/login.html" class="flex flex-col items-center text-gray-600 font-bold hover:text-[#e50027]">
             <span class="text-2xl">🔐</span>
-            <span class="text-xs">Admin</span>
+            <span class="text-xs uppercase tracking-widest">Admin</span>
         </a>
     </nav>
 
-    <main class="container mx-auto mt-10 pb-20 px-6">
-        <div class="p-10 bg-white border border-gray-300 rounded max-w-3xl mx-auto shadow-sm">
-            <h1 class="text-3xl font-bold mb-4 text-black">About Our Project</h1>
-            <p class="mb-6">We made this website because we love football. It is a place where you can see cards of famous players and collect them.</p>
+    <main class="container mx-auto mt-10 pb-20">
+        <!-- About Hero Section -->
+        <section class="md:p-12 p-8 mx-6 md:mx-0 bg-[#e50027] border-[3px] border-black rounded-2xl shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center mb-10 text-white">
+            <h1 class="text-6xl font-black mb-4 uppercase tracking-tighter italic">About the Game</h1>
+            <p class="text-xl max-w-2xl mx-auto font-medium">
+                Bringing the passion of football to your digital screen through beautiful card collection.
+            </p>
+        </section>
 
-            <div class="space-y-8">
-                <section>
-                    <h2 class="text-xl font-bold mb-2">Our Mission</h2>
-                    <p>Our goal is to make a simple app for fans. We want everyone to be able to see their favorite players easily on their phone or computer.</p>
-                </section>
+        <div class="max-w-4xl mx-auto px-6 md:px-0">
+            <div class="bg-white p-10 rounded-2xl border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] mb-12">
+                <h2 class="text-4xl font-black mb-6 uppercase tracking-tighter italic border-b-[3px] border-black pb-4">Our Mission</h2>
+                <p class="text-xl text-gray-700 leading-relaxed font-medium mb-6">
+                    We believe every football fan deserves a piece of history. Our platform was built to provide a simple yet engaging way for fans to explore player statistics, collect cards, and build their dream teams.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Started as a small project, we've grown into a community of collectors who share the same passion for the beautiful game. Every card in our gallery represents a unique talent and a story waiting to be discovered.
+                </p>
+            </div>
 
-                <section>
-                    <h2 class="text-xl font-bold mb-2">How it started</h2>
-                    <p>This project was started for a bootcamp. We learned how to use HTML, CSS, and Javascript to make a working app. We hope you like it!</p>
-                </section>
-
-                <section class="p-4 bg-[#fde8e8] border-l-4 border-[#e50027] rounded-lg">
-                    <h2 class="text-lg font-bold mb-1">Tech Stack:</h2>
-                    <ul class="list-disc list-inside text-sm">
-                        <li>HTML for structure</li>
-                        <li>CSS (Tailwind) for colors</li>
-                        <li>Javascript for the game logic</li>
-                        <li>LocalStorage for saving favorites</li>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-yellow-50 p-8 rounded-2xl border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                    <h3 class="text-2xl font-black mb-4 uppercase italic">Pure Passion</h3>
+                    <p class="font-bold text-gray-700">Created by fans, for fans. Every detail is crafted to celebrate football culture.</p>
+                </div>
+                <div class="bg-blue-50 p-8 rounded-2xl border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                    <h3 class="text-2xl font-black mb-4 uppercase italic">Tech Stack</h3>
+                    <ul class="font-bold text-gray-700 space-y-1">
+                        <li>• HTML5 Structure</li>
+                        <li>• Tailwind CSS Styling</li>
+                        <li>• Vanilla JavaScript Logic</li>
                     </ul>
-                </section>
+                </div>
             </div>
         </div>
     </main>
