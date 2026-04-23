@@ -18,7 +18,7 @@
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900 pb-20">
+<body class="bg-gray-100 text-gray-900 pb-8">
     <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 shadow-md z-50">
         <div class="container mx-auto grid grid-cols-[1fr_auto_1fr] items-center">
             <div class="justify-self-start">
@@ -40,8 +40,7 @@
     </nav>
 
     <!-- Mobile Navbar -->
-    <nav
-        class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
         <a href="index.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
             <span class="text-2xl">🏠</span>
             <span class="text-xs">Home</span>
@@ -68,7 +67,7 @@
         </a>
     </nav>
 
-    <main class="container mx-auto mt-6 px-6">
+    <main class="container mx-auto mt-10 pb-20">
         <!-- Reward Hero / Shuffle Section -->
         <section class="max-w-4xl mx-auto">
             <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
@@ -103,11 +102,11 @@
         <!-- Recent Rewards History -->
         <section class="max-w-4xl mx-auto mt-16">
             <div class="flex items-center justify-between mb-8">
-                <h2 class="text-2xl font-bold text-gray-900">Recent Pulls</h2>
-                <span class="text-sm text-gray-500">Your latest luck history</span>
+                <h2 class="text-2xl font-bold text-gray-900 px-6 md:px-0">Recent Pulls</h2>
+                <span class="text-sm text-gray-500 px-6 md:px-0">Your latest luck history</span>
             </div>
 
-            <div id="rewardHistories" class="space-y-4 pb-12">
+            <div id="rewardHistories" class="space-y-4 px-6 md:px-0 pb-12">
                 <!-- Dynamic Content -->
                 <div class="bg-white p-8 rounded-2xl shadow-sm text-center border border-gray-100 text-gray-400">
                     No pulls recorded yet. Start shuffling!
@@ -116,8 +115,12 @@
         </section>
     </main>
 
-    <script src="players.js"></script>
-    <script src="favorites.js"></script>
+    <footer class="text-center mt-10 mb-20 text-gray-500 text-sm">
+        &copy; 2026 Football Card Game. All rights reserved.
+    </footer>
+
+    <script src="scripts/players.js"></script>
+    <script src="scripts/favorites.js"></script>
     <script>
         dayjs.extend(window.dayjs_plugin_relativeTime);
 

@@ -17,7 +17,7 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900 pb-8">
-    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 shadow-md">
+    <nav class="w-full bg-[#e50027] p-4 text-white sticky top-0 shadow-md z-50">
         <div class="container mx-auto grid grid-cols-[1fr_auto_1fr] items-center">
             <div class="justify-self-start">
                 <a href="index.html" class="text-xl font-bold">Football Cards</a>
@@ -38,9 +38,8 @@
     </nav>
 
     <!-- Mobile Navbar -->
-    <nav
-        class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
-        <a href="index.html" class="flex flex-col items-center text-gray-600 hover:text-[#e50027]">
+    <nav class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center p-4 z-50 lg:hidden">
+        <a href="index.html" class="flex flex-col items-center text-[#e50027]">
             <span class="text-2xl">🏠</span>
             <span class="text-xs">Home</span>
         </a>
@@ -66,11 +65,11 @@
         </a>
     </nav>
 
-    <main class="container mx-auto mt-10">
+    <main class="container mx-auto mt-10 pb-20">
         <!-- Hero Section -->
-        <section class="md:p-12 p-6 mx-6 md:mx-0 bg-[#e50027] rounded-lg shadow-md text-center mb-10">
-            <h1 class="text-5xl font-extrabold mb-6 text-white">Your Ultimate Football Card Collection</h1>
-            <p class="text-xl text-white mb-10 max-w-2xl mx-auto">
+        <section class="md:p-12 p-6 mx-6 md:mx-0 bg-[#e50027] rounded-lg shadow-md text-center mb-10 text-white">
+            <h1 class="text-5xl font-extrabold mb-6">Your Ultimate Football Card Collection</h1>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">
                 Step into the world of professional football! Collect legendary players, discover rising stars, and
                 build your dream team with our interactive card system.
             </p>
@@ -82,7 +81,7 @@
         </section>
 
         <!-- Feature Section 1: Instant Rewards -->
-        <section class="flex flex-col md:flex-row items-stretch gap-12 py-6 md:px-0 px-6 rounded-lg">
+        <section class="flex flex-col md:flex-row items-stretch gap-12 py-6 md:px-0 px-6 rounded-lg mb-10">
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="text-[#e50027] text-6xl mb-6">🔀</div>
                 <h2 class="text-4xl font-bold mb-4 text-gray-900">Instant Rewards at Your Fingertips</h2>
@@ -104,7 +103,7 @@
         </section>
 
         <!-- Feature Section 2: Favorite Players -->
-        <section class="flex flex-col md:flex-row-reverse items-stretch gap-12 py-6 px-6 bg-white rounded-lg">
+        <section class="flex flex-col md:flex-row-reverse items-stretch gap-12 py-6 px-6 bg-white rounded-lg mb-10 border border-gray-100">
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="text-green-500 text-6xl mb-6">❤️</div>
                 <h2 class="text-4xl font-bold mb-4 text-gray-900">Keep Your Idols Close</h2>
@@ -124,7 +123,7 @@
         </section>
 
         <!-- Feature Section 3: Player Stats -->
-        <section class="flex flex-col md:flex-row items-stretch gap-12 py-6 md:px-0 px-6 rounded-lg">
+        <section class="flex flex-col md:flex-row items-stretch gap-12 py-6 md:px-0 px-6 rounded-lg mb-10">
             <div class="md:w-1/2 flex flex-col justify-center">
                 <div class="text-yellow-500 text-6xl mb-6">📊</div>
                 <h2 class="text-4xl font-bold mb-4 text-gray-900">Deep-Dive Into Stats</h2>
@@ -159,8 +158,13 @@
         </section>
     </main>
 
-    <footer class="text-center mt-10 text-gray-500 text-sm">
+    <footer class="text-center mt-10 mb-20 text-gray-500 text-sm">
         &copy; 2026 Football Card Game. All rights reserved.
+    </footer>
+</body>
+
+</html>
+erved.
     </footer>
 </body>
 
