@@ -10,6 +10,7 @@ A web-based card game application featuring football players, built with a focus
 - **Players (`/players`)**: Browse the collection of available football players.
 - **Tutorial (`/tutorial`)**: Guide on how to use the player cards.
 - **About (`/about`)**: Information about the project.
+- **Contact (`/contact`)**: Contact information for the project.
 
 ### Admin Area
 - **Login (`/admin/login`)**: Secure access for administrators.
