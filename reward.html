@@ -34,7 +34,7 @@
             </div>
             <div class="justify-self-end lg:block hidden">
                 <a href="admin/login.html"
-                    class="bg-white text-black border-2 border-black px-4 py-1.5 rounded-lg font-bold text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">Admin
+                    class="bg-white text-black border-2 border-black px-4 py-1.5 rounded-lg font-bold text-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all">Admin
                     Login</a>
             </div>
         </div>
@@ -70,19 +70,24 @@
     </nav>
 
     <main class="container mx-auto mt-6 md:mt-10 pb-20">
+        <!-- About Hero Section -->
+        <section
+            class="md:p-10 p-6 mx-6 md:mx-0 bg-[#e50027] border-2 border-black rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-center mb-10 text-white">
+            <h1 class="text-3xl font-black mb-3 uppercase tracking-tighter italic">Shuffle & Win</h1>
+            <p class="text-lg max-w-2xl mx-auto font-medium text-red-50">
+                Pull a legendary player for your
+                collection!
+            </p>
+        </section>
+
         <!-- Reward Hero / Shuffle Section -->
         <section class="max-w-4xl mx-auto px-6 md:px-0">
             <div
                 class="bg-white rounded-[40px] shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] overflow-hidden border-2 border-black">
-                <div class="bg-[#e50027] p-8 text-center text-white border-b-2 border-black">
-                    <h1 class="text-4xl font-black mb-2 uppercase tracking-tighter italic">Shuffle & Win</h1>
-                    <p class="text-white font-bold uppercase tracking-widest text-xs">Pull a legendary player for your
-                        collection!</p>
-                </div>
-
-                <div class="p-8 md:p-12 text-center flex flex-col items-center bg-yellow-50">
+                <div class="p-6 md:p-8 text-center flex flex-col items-center bg-yellow-50">
                     <!-- Notification Area -->
-                    <div id="rewardNotification" class="h-16 mb-6 md:h-20 md:mb-8 flex items-center justify-center text-center">
+                    <div id="rewardNotification"
+                        class="h-16 mb-6 md:h-20 md:mb-8 flex items-center justify-center text-center">
                         <p class="text-lg md:text-xl font-black text-gray-700 uppercase italic opacity-50">
                             Waiting for shuffle...
                         </p>
@@ -91,13 +96,13 @@
                     <!-- The Card Container -->
                     <div class="relative group">
                         <div id="rewardCard"
-                            class="w-44 h-64 md:w-56 md:h-80 bg-white rounded-3xl mx-auto mb-10 flex items-center justify-center text-gray-900 text-5xl md:text-7xl shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-2 border-black transition-all duration-500 overflow-hidden relative group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
+                            class="w-44 h-64 md:w-56 md:h-80 bg-white rounded-3xl mx-auto mb-10 flex items-center justify-center text-gray-900 text-5xl md:text-7xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] border-2 border-black transition-all duration-500 overflow-hidden relative group-hover:-translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
                             ?
                         </div>
                     </div>
 
                     <button id="shuffleBtn"
-                        class="bg-[#e50027] text-white px-8 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xl md:text-2xl border-2 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-tighter italic">
+                        class="bg-[#e50027] text-white px-8 py-4 md:px-12 md:py-5 rounded-2xl font-black text-xl md:text-2xl border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-tighter italic">
                         Start Shuffle
                     </button>
                 </div>
