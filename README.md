@@ -18,7 +18,6 @@ A web-based card game application featuring football players, built with a focus
 ## 🛠️ Tech Stack
 - **Frontend**: HTML5, Vanilla JavaScript
 - **Styling**: Tailwind CSS (via CDN)
-- **Icons**: (Optional/To be added)
 
 ## 📦 Getting Started
 
